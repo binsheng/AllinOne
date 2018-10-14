@@ -1170,3 +1170,9 @@ toc-nav  scrollspy
   color: #666 !important;
   font-style: normal;
 }
+
+body main img{
+    margin: 3rem auto !important;
+    display: block;
+    text-align: center;
+}
