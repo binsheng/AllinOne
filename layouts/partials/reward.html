@@ -1,30 +1,22 @@
-<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>{{ .Site.Params.reward_comment }}</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    {{ if .Site.Params.wechatpay }}
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="{{ .Site.Params.wechatpay | absURL}}" alt="{{ .Site.Params.author }} 微信"/>
-        <p>微信打赏</p>
-      </div>
-    {{ end }}
-
-    {{ if .Site.Params.alipay }}
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="{{ .Site.Params.alipay | absURL }}" alt="{{ .Site.Params.author }} 支付宝 "/>
-        <p>支付宝打赏</p>
-      </div>
-    {{ end }}
-
-    {{ if .Site.Params.bitcoin }}
-      <div id="bitcoin" style="display: inline-block">
-        <img id="bitcoin_qr" src="{{ .Site.Params.bitcoin | absURL }}" alt="{{ .Site.Params.author }} 比特币"/>
-        <p>比特币打赏</p>
-      </div>
-    {{ end }}
-
-  </div>
+{{ if .Site.Params.reward }}
+<div class="post-reward">
+    <input type="checkbox" name="reward" id="reward" hidden />
+    <label class="reward-button" for="reward">{{ i18n "reward" }}</label>
+    <div class="qr-code">
+        {{ $qrCode := .Site.Params.reward }}
+        {{ with $qrCode.wechat }}
+        <label class="qr-code-image" for="reward">
+            <img class="image" src="{{ . | absURL }}">
+            <span>{{ i18n "rewardWechat" }}</span>
+        </label>
+        {{- end }}
+        {{ with $qrCode.alipay }}
+        <label class="qr-code-image" for="reward">
+            <img class="image" src="{{ . | absURL}}">
+            <span>{{ i18n "rewardAlipay" }}</span>
+        </label>
+        {{- end }}
+    </div>
 </div>
+{{- end }}
+

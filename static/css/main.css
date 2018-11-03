@@ -1180,69 +1180,48 @@ body main img{
 }
 
 
-
-/* reward */
-#rewardButton {
+/* jane reward */
+.post-reward {
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px dashed #e6e6e6;
+}
+.post-reward .reward-button {
+    margin: 15px 0;
+    padding: 3px 7px;
+    display: inline-block;
+    color: #c05b4d;
+    border: 1px solid #c05b4d;
+    border-radius: 5px;
     cursor: pointer;
-    border: 0;
-    outline: 0;
-    border-radius: 5px;
-    padding: 0;
-    margin: 0;
-    letter-spacing: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
 }
-#rewardButton span {
+.post-reward .reward-button:hover {
+    color: #fefefe;
+    background-color: #c05b4d;
+    transition: 0.5s;
+}
+.post-reward #reward:checked ~ .qr-code {
+    display: block;
+}
+.post-reward #reward:checked ~ .reward-button {
+    display: none;
+}
+.post-reward .qr-code {
+    display: none;
+}
+.post-reward .qr-code .qr-code-image {
     display: inline-block;
-    width: 80px;
-    height: 35px;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: 400;
-    font-style: normal;
-    font-variant: normal;
-    font-stretch: normal;
-    font-size: 20px;
-    font-family: "Microsoft Yahei";
-    background: #F44336;
+    min-width: 200px;
+    width: 40%;
+    margin-top: 15px;
 }
-#rewardButton span:hover{
-    background: #F7877F;
-}
-#QR{
-    padding-top:20px;
-}
-#QR a{
-    border:0;
-}
-#QR img{
-    width: 180px;
-    max-width: 100%;
+.post-reward .qr-code .qr-code-image span {
     display: inline-block;
-    margin: 0.8em 2em 0 2em;
+    width: 100%;
+    margin: 8px 0;
 }
-#wechat:hover p{
-    animation: roll 0.1s infinite linear;
-    -webkit-animation: roll 0.1s infinite linear;
-    -moz-animation: roll 0.1s infinite linear;
-}
-#alipay:hover p{
-    animation: roll 0.1s infinite linear;
-    -webkit-animation: roll 0.1s infinite linear;
-    -moz-animation: roll 0.1s infinite linear;
-}
-#bitcoin:hover p {
-    animation: roll 0.1s infinite linear;
-    -webkit-animation: roll 0.1s infinite linear;
-    -moz-animation: roll 0.1s infinite linear;
-}
-@keyframes roll {
-    from {
-      transform(rotateZ(30deg));
-    }
-    to {
-      transform(rotateZ(-30deg));
-    }
+.post-reward .qr-code .image {
+    width: 200px;
+    height: 200px;
 }
