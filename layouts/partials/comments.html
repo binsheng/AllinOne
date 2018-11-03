@@ -1,16 +1,19 @@
+{{ if .Site.Params.gitalk.enable }}
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 <div id="gitalk-container"></div>
 <script type="text/javascript">
     const gitalk = new Gitalk({
-        clientID: '1234e4dd9e0ad49470be',
-        clientSecret: '9acb7351fca3dcca6d3cc50be8a1d2cf329f4163',
-        repo: 'binsheng.github.io',
-        owner: 'binsheng',
-        admin: ['binsheng'],
+        clientID: '{{ .Site.Params.gitalk.clientId }}',
+        clientSecret: '{{ .Site.Params.gitalk.clientSecret }}',
+        repo: '{{ .Site.Params.gitalk.repo }}',
+        owner: '{{ .Site.Params.gitalk.owner }}',
+        admin: '{{ .Site.Params.gitalk.admin }}',
         id: location.pathname, // Ensure uniqueness and length less than 50
-        distractionFreeMode: false // Facebook-like distraction free mode
+        distractionFreeMode: '{{ .Site.Params.gitalk.distractionFreeMode }}' // Facebook-like distraction free mode
     })
 
     gitalk.render('gitalk-container')
 </script>
+
+{{end}}
