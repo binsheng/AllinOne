@@ -19,3 +19,12 @@
 
 - id: postCount
   translation: "共有{{ .Count }}篇文章"
+
+- id: reward
+  translation: "赞赏支持"
+
+- id: rewardWechat
+  translation: "微信打赏"
+
+- id: rewardAlipay
+  translation: "支付宝打赏"

@@ -23,3 +23,12 @@
   translation: 
     one: "One post"
     other: "{{ .Count }} posts"
+
+- id: reward
+  translation: "reward"
+
+- id: rewardWechat
+  translation: "reward Wechat"
+
+- id: rewardAlipay
+  translation: "reward Alipay"
