@@ -41,8 +41,10 @@
           </div>
           <!-- /.Tags -->
 
+          {{ partial "post-copyright.html" .}}
+
           <!-- Prev & Next -->
-          <div class="row pt-3">
+          <div class="row pt-3 np">
             <div class="col-md-6">
               {{ if .PrevInSection }}
                 <a href={{ .PrevInSection.Permalink }} class="post-meta">{{ i18n "previousPost" }}
