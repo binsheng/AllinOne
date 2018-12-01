@@ -4,7 +4,6 @@
   <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
   <!-- <body class="bg-light" data-spy="scroll" data-target="#TableOfContents" data-offset="90"> -->
     <!-- Code that all your templates share, like a header -->
-    
 
     {{ block "header" . }}
       {{ partial "site-navbar.html" . }} 
@@ -14,7 +13,7 @@
     {{ block "main" . }}
       <!-- The part of the page that begins to differ between templates -->
     {{ end }}
-    
+
     {{ partial "footer.html" . }}
     {{ partial "site-scripts.html" . }}
   </body>

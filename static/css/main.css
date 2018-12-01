@@ -1278,3 +1278,81 @@ body main img{
     border-top: 1px solid #eee;
     margin-top: 15px;
 }
+
+
+/* archive */
+.archive {
+  margin: 2em 0;
+  max-width: 550px;
+}
+.archive .archive-title {
+  font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+}
+.archive .archive-title.tag, .archive .archive-title.category {
+  margin: 15px 0;
+}
+.archive .archive-title .archive-name {
+  margin: 0;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 32px;
+}
+.archive .archive-title .archive-post-counter {
+  color: #8a8a8a;
+}
+.archive .collection-title {
+  font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+}
+.archive .collection-title .archive-year {
+  margin: 15px 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 30px;
+}
+.archive .archive-post {
+  padding: 3px 20px;
+  border-left: 1px solid #cacaca;
+}
+.archive .archive-post .archive-post-time {
+  margin-right: 10px;
+  color: #8a8a8a;
+}
+.archive .archive-post .archive-post-title .archive-post-link {
+  color: inherit;
+}
+.archive .archive-post::first-child {
+  margin-top: 10px;
+}
+.archive .archive-post:hover {
+  border-left: 3px solid var(--active-color);
+  transition: 0.2s ease-out;
+  transform: 0.2s ease-out;
+}
+.archive .archive-post:hover .archive-post-time {
+  color: #717171;
+}
+.archive .archive-post:hover .archive-post-title .archive-post-link {
+    color: var(--active-color);
+}
+
+@media screen and (max-width: 1025px) {
+  .archive {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .archive .archive-title .archive-name {
+    font-size: 26px;
+  }
+  .archive .collection-title .archive-year {
+    margin: 10px 0;
+    font-size: 28px;
+  }
+  .archive .archive-post {
+    padding: 5px 10px;
+  }
+  .archive .archive-post .archive-post-time {
+    font-size: 10px;
+    display: block;
+  }
+}
