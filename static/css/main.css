@@ -404,7 +404,6 @@ Markdown
 
 .markdown pre, .markdown code {
   /* background-color: #f7f7f7; */
-  background-color: var(--grey-l4);
   /* font-size: 1rem; */
 }
 
@@ -413,6 +412,7 @@ Markdown
   padding: .15em .5em;
   margin-left: 0.1em;
   margin-right: 0.1em;
+  background-color: var(--grey-l4);
   border-radius: 4px;
 }
 
@@ -421,7 +421,7 @@ Markdown
   display: block;
   margin-top: 1rem;
   margin-bottom: 2rem;
-  padding: 1rem;
+  /* padding: 1rem; */
   line-height: 1.5em;
   /* white-space: pre; */
   /* white-space: pre-wrap; */
@@ -432,7 +432,8 @@ Markdown
 }
 
 .markdown pre code {
-  padding: 0;
+  padding: 15px 20px;
+  background: #282a36;
 }
 
 .markdown p {
