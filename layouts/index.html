@@ -27,7 +27,7 @@
         <!-- <div class="pt-5 px-5 mx-5"> -->
         <div class="col-md-9 mt-3">
             <div>
-                {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+                {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
                 {{ range $paginator.Pages }}
                     {{ partial "post-card.html" . }}
                 {{ end }}
