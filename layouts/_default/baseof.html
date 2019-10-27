@@ -5,6 +5,8 @@
   <!-- <body class="bg-light" data-spy="scroll" data-target="#TableOfContents" data-offset="90"> -->
     <!-- Code that all your templates share, like a header -->
 
+	  <canvas class="fireworks" style="position: fixed; left: 0px; top: 0px; z-index: 1; pointer-events: none; width: 1280px; height: 192px;" width="2560" height="384"><script type="text/javascript" src="{{ "js/vendors/anime.min.js" | absURL }}"></script><script type="text/javascript" src="{{ "js/vendors/fireworks.js" | absURL }}"></script></canvas>
+
     {{ block "header" . }}
       {{ partial "site-navbar.html" . }} 
       {{ partial "page-header.html" . }}  
