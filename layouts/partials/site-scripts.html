@@ -21,14 +21,18 @@
 
 
 <!-- Highlight -->
-{{ if .Site.Params.highlightjs }}  
-  <script src="{{ "js/vendors/highlight.pack.js" | absURL }}"> </script>
+{{ if .Site.Params.highlightjs }}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/cmake.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/groovy.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/gradle.min.js"> </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/dockerfile.min.js"> </script>
   <script>hljs.initHighlightingOnLoad();</script>
 {{ end }}
 <!-- /.Highlight -->
 
 <!-- KaTeX -->
-{{ if .Site.Params.katex }} 
+{{ if .Site.Params.katex }}
   <script src="{{ "js/vendors/katex/katex.min.js" | absURL }}"> </script>
   <script src="{{ "js/vendors/katex/contrib/auto-render.min.js" | absURL }}"></script>
 
@@ -49,6 +53,3 @@
   // Animations initialization
   new WOW().init();
 </script>
-
-
-
